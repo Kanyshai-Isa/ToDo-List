@@ -41,7 +41,7 @@ def main(page: ft.Page):
 
     def add_task(_):
             task = task_input.value
-            if len(task_input.value)<=3:
+            if len(task_input.value)<=100:
                  task_id = main_db.add_task(task)
                  task_list.controls.append(create_task_row(task_id=task_id, task_text=task, completed=None))
                  task_input.value = ""
